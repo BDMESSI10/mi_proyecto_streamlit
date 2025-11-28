@@ -34,7 +34,8 @@ def procesar_datos(df):
         else:
             df=pd.read_excel(archivo)
 
-        df=procesar_datos(df)st.success("Archivo cargado correctamente")
+        df=procesar_datos(df)
+		st.success("Archivo cargado correctamente")
         st.dataframe(df.head())
     else:
         st.warning("Por favor sube un archivo para continuar")
@@ -244,4 +245,5 @@ if not df_filtrado.empty:
     st.plotly_chart(fig3, use_container_width=True)
 else:
     st.warning("⚠️ No hay datos disponibles para graficar el cumplimiento.")
+
 
